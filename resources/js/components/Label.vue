@@ -1,13 +1,15 @@
 <template>
-  <label></label>
+  <label>{{ label }}</label>
 </template>
 
 <script>
 export default {
-  name: "label",
-  props: {},
-  data() {
-    return {};
+  name: "Label",
+  props: {
+    label: {
+      type: String,
+      default: "",
+    },
   },
 };
 </script>

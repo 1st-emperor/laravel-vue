@@ -1,0 +1,47 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "currency": [
+    {
+      "value": "usd",
+      "name": "USD"
+    },
+    {
+      "value": "aed",
+      "name": "AED"
+    },
+    {
+      "value": "idr",
+      "name": "IDR"
+    }
+  ],
+  "uom": [
+    {
+      "value": "shp",
+      "name": "SHP"
+    },
+    {
+      "value": "mhp",
+      "name": "MHP"
+    },
+    {
+      "value": "lhp",
+      "name": "LHP"
+    }
+  ]
+}

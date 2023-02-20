@@ -6,7 +6,9 @@
 
 require("./bootstrap");
 
-window.Vue = require("vue").default;
+// window.Vue = require("vue").default;
+import Vue from "vue";
+import store from "./store";
 
 /**
  * The following block of code may be used to automatically register your
@@ -27,6 +29,9 @@ Vue.component("main-component", require("./pages/List.vue").default);
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
+Vue.prototype.$store = store;
+
 const app = new Vue({
     el: "#app",
+    store,
 });

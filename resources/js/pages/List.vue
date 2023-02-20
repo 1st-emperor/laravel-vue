@@ -1,19 +1,54 @@
 <template>
   <div>
-    <CostDetail />
+    <CostDetail :model="model" />
     <div class="mx-3 my-4 d-flex justify-content-end">
-      <button class="btn btn-transparant">Cancel</button>
-      <button class="btn btn-draft">Save as Draft</button>
-      <button class="btn btn-submit">Submit</button>
+      <v-button
+        class="btn-transparant border-0"
+        background="none"
+        :gray="true"
+        label="Cancel"
+        :click="onClear"
+      ></v-button>
+      <v-button
+        class="btn-draft"
+        :gray="true"
+        label="Save as Draft"
+        :click="onDraft"
+      ></v-button>
+      <v-button class="btn-submit" label="Submit" :click="onSubmit"></v-button>
     </div>
   </div>
 </template>
 
 <script>
 import CostDetail from "./CostDetail.vue";
+import VButton from "../components/Button.vue";
 export default {
-  components: { CostDetail },
   name: "list",
+  components: { CostDetail, VButton },
+  data() {
+    return {
+      model: {
+        list: null,
+      },
+    };
+  },
+  methods: {
+    onClear(event) {
+      event.preventDefault();
+      console.log(this.model, "clear");
+    },
+    onDraft(event) {
+      event.preventDefault();
+      console.log(this.model, "draft");
+    },
+    onSubmit(event) {
+      event.preventDefault();
+      console.log(this.model, "model");
+
+      alert("Success!");
+    },
+  },
 };
 </script>
 

@@ -37,230 +37,135 @@
               <th></th>
             </tr>
           </thead>
-          <tbody>
-            <!--TR 1-->
-            <tr>
-              <td>
-                <input
-                  type="text"
-                  class="form-control bg-light"
-                  v-model="model.description"
-                  placeholder="Description"
-                />
-              </td>
-              <td>
-                <input
-                  type="text"
-                  class="form-control bg-light w-text"
-                  v-model="model.quantity"
-                  placeholder="Qty"
-                />
-              </td>
-              <td>
-                <select
-                  class="form-select bg-light w-select"
-                  aria-label=".form-select-sm"
-                  v-model="model.uom"
-                >
-                  <option value="shp" selected>SHP</option>
-                  <option value="mhp">MHP</option>
-                  <option value="lhp">LHP</option>
-                </select>
-              </td>
-              <td>
-                <input
-                  type="text"
-                  class="form-control bg-light w-text"
-                  v-model="model.price"
-                  placeholder="Unit Price"
-                />
-              </td>
-              <td>
-                <input
-                  class="form-control bg-light w-number"
-                  type="text"
-                  v-model="model.discount"
-                  placeholder="0.00"
-                />
-              </td>
-              <td>
-                <input
-                  class="form-control bg-light w-number"
-                  type="text"
-                  v-model="model.vat"
-                  placeholder="0.00"
-                />
-              </td>
-              <td class="d-flex justify-content-center align-items-center">
-                <div>
-                  <i class="text-secondary" data-feather="arrow-right"></i>
-                </div>
-              </td>
-              <td>
-                <select
-                  class="form-select bg-light w-select"
-                  aria-label=".form-select-sm"
-                  v-model="model.currency"
-                >
-                  <option value="usd" selected>USD</option>
-                  <option value="idr">IDR</option>
-                  <option value="sgd">SGD</option>
-                </select>
-              </td>
-              <td>
-                <input
-                  class="form-control w-number border-0"
-                  type="text"
-                  v-model="model.vatAmount"
-                  placeholder="0.00"
-                />
-              </td>
-              <td>
-                <input
-                  class="form-control w-number border-0"
-                  type="text"
-                  v-model="model.subTotal"
-                  placeholder="0.00"
-                />
-              </td>
-              <td>
-                <input
-                  class="form-control w-number border-0"
-                  type="text"
-                  v-model="model.total"
-                  placeholder="0.00"
-                />
-              </td>
-              <td>
-                <select
-                  class="form-select form-select-sm"
-                  aria-label=".form-select-sm"
-                  v-model="model.chargeTo"
-                >
-                  <option value="null" selected>Select an option</option>
-                  <option value="usd">USD</option>
-                  <option value="idr">IDR</option>
-                  <option value="sgd">SGD</option>
-                </select>
-              </td>
-              <td class="d-flex justify-content-center align-items-center">
-                <button class="btn btn-grey btn-sm">
-                  <i data-feather="minus"></i>
-                </button>
-              </td>
-            </tr>
-
-            <!--TR 2-->
-            <tr>
-              <td>
-                <input
-                  type="text"
-                  class="form-control bg-light"
-                  v-model="model.description"
-                  placeholder="Description"
-                />
-              </td>
-              <td>
-                <input
-                  type="text"
-                  class="form-control bg-light w-text"
-                  v-model="model.quantity"
-                  placeholder="Qty"
-                />
-              </td>
-              <td>
-                <select
-                  class="form-select bg-light w-select"
-                  aria-label=".form-select-sm"
-                  v-model="model.uom"
-                >
-                  <option value="shp" selected>SHP</option>
-                  <option value="mhp">MHP</option>
-                  <option value="lhp">LHP</option>
-                </select>
-              </td>
-              <td>
-                <input
-                  type="text"
-                  class="form-control bg-light w-text"
-                  v-model="model.price"
-                  placeholder="Unit Price"
-                />
-              </td>
-              <td>
-                <input
-                  class="form-control bg-light w-number"
-                  type="text"
-                  v-model="model.discount"
-                  placeholder="0"
-                />
-              </td>
-              <td>
-                <input
-                  class="form-control bg-light w-number"
-                  type="text"
-                  v-model="model.vat"
-                  placeholder="0"
-                />
-              </td>
-              <td class="d-flex justify-content-center align-items-center">
-                <div>
-                  <i class="text-secondary" data-feather="arrow-right"></i>
-                </div>
-              </td>
-              <td>
-                <select
-                  class="form-select bg-light w-select"
-                  aria-label=".form-select-sm"
-                  v-model="model.currency"
-                >
-                  <option value="usd" selected>USD</option>
-                  <option value="idr">IDR</option>
-                  <option value="sgd">SGD</option>
-                </select>
-              </td>
-              <td>
-                <input
-                  class="form-control w-number border-0"
-                  type="text"
-                  v-model="model.vatAmount"
-                  placeholder="0.00"
-                />
-              </td>
-              <td>
-                <input
-                  class="form-control w-number border-0"
-                  type="text"
-                  v-model="model.subTotal"
-                  placeholder="0.00"
-                />
-              </td>
-              <td>
-                <input
-                  class="form-control w-number border-0"
-                  type="text"
-                  v-model="model.total"
-                  placeholder="0.00"
-                />
-              </td>
-              <td>
-                <select
-                  class="form-select form-select-sm"
-                  aria-label=".form-select-sm"
-                  v-model="model.chargeTo"
-                >
-                  <option value="null" selected>Select an option</option>
-                  <option value="usd">USD</option>
-                  <option value="idr">IDR</option>
-                  <option value="sgd">SGD</option>
-                </select>
-              </td>
-              <td class="d-flex justify-content-center align-items-center">
-                <button class="btn btn-grey btn-sm">
-                  <i data-feather="minus"></i>
-                </button>
-              </td>
-            </tr>
+          <tbody v-if="model.list != null">
+            <template v-for="(item, index) in model.list">
+              <!--TR 1-->
+              <tr :key="'tr1_' + index">
+                <td>
+                  <input
+                    type="text"
+                    class="form-control bg-light"
+                    v-model="model.list[index].description"
+                    placeholder="Description"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="text"
+                    class="form-control bg-light w-text"
+                    v-model="model.list[index].quantity"
+                    placeholder="Qty"
+                  />
+                </td>
+                <td>
+                  <select
+                    class="form-select bg-light w-select"
+                    aria-label=".form-select-sm"
+                    v-model="model.list[index].uom"
+                  >
+                    <option
+                      v-for="(uom, index) in listUom"
+                      :key="index"
+                      :value="uom.value"
+                    >
+                      {{ uom.name }}
+                    </option>
+                  </select>
+                </td>
+                <td>
+                  <input
+                    type="text"
+                    class="form-control bg-light w-text"
+                    v-model="model.list[index].price"
+                    placeholder="Unit Price"
+                  />
+                </td>
+                <td>
+                  <input
+                    class="form-control bg-light w-number"
+                    type="text"
+                    v-model="model.list[index].discount"
+                    placeholder="0.00"
+                  />
+                </td>
+                <td>
+                  <input
+                    class="form-control bg-light w-number"
+                    type="text"
+                    v-model="model.list[index].vat"
+                    placeholder="0.00"
+                  />
+                </td>
+                <td class="d-flex justify-content-center align-items-center">
+                  <div>
+                    <i class="text-secondary" data-feather="arrow-right"></i>
+                  </div>
+                </td>
+                <td>
+                  <select
+                    class="form-select bg-light w-select"
+                    aria-label=".form-select-sm"
+                    v-model="model.list[index].currency"
+                  >
+                    <option
+                      v-for="(currency, index) in listCurrency"
+                      :key="index"
+                      :value="currency.value"
+                    >
+                      {{ currency.name }}
+                    </option>
+                  </select>
+                </td>
+                <td>
+                  <input
+                    class="form-control w-number border-0"
+                    type="text"
+                    v-model="model.list[index].vatAmount"
+                    placeholder="0.00"
+                  />
+                </td>
+                <td>
+                  <input
+                    class="form-control w-number border-0"
+                    type="text"
+                    v-model="model.list[index].subTotal"
+                    placeholder="0.00"
+                  />
+                </td>
+                <td>
+                  <input
+                    class="form-control w-number border-0"
+                    type="text"
+                    v-model="model.list[index].total"
+                    placeholder="0.00"
+                  />
+                </td>
+                <td>
+                  <select
+                    class="form-select form-select-sm"
+                    aria-label=".form-select-sm"
+                    v-model="model.list[index].chargeTo"
+                  >
+                    <option value="null" selected>Select an option</option>
+                    <option
+                      v-for="(currency, index) in listCurrency"
+                      :key="index"
+                      :value="currency.value"
+                    >
+                      {{ currency.name }}
+                    </option>
+                  </select>
+                </td>
+                <td class="d-flex justify-content-center align-items-center">
+                  <button
+                    class="btn btn-grey btn-sm"
+                    @click="removeCost(index)"
+                  >
+                    <i data-feather="minus"></i>
+                  </button>
+                </td>
+              </tr>
+            </template>
 
             <!--TR 3-->
             <tr class="border-bottom-0">
@@ -270,7 +175,7 @@
                   <input
                     type="text"
                     class="form-control bg-light w-text"
-                    v-model="exRate"
+                    v-model="model.exRate"
                     placeholder="0.00"
                   />
                   AED
@@ -312,7 +217,7 @@
               </td>
               <td colspan="2">
                 <div class="d-flex justify-content-end align-items-center">
-                  <button class="btn btn-plus btn-sm">
+                  <button class="btn btn-plus btn-sm" @click="addCost">
                     <i data-feather="plus"></i>
                   </button>
                 </div>
@@ -366,15 +271,38 @@
 </template>
 
 <script>
-import Button from "../components/Button.vue";
-import Input from "../components/Input.vue";
+import VInput from "../components/Input.vue";
 export default {
-  components: { Button, Input },
+  props: ["model"],
+  components: { VInput },
   data() {
     return {
       visible: true,
-      exRate: 3.6725,
-      model: {
+    };
+  },
+  mounted() {
+    this.$store.dispatch("get_currency");
+    this.$store.dispatch("get_uom");
+
+    [0, 0].forEach((r) => this.addCost());
+  },
+  computed: {
+    listCurrency() {
+      return this.$store.getters.listCurrency;
+    },
+    listUom() {
+      return this.$store.getters.listUom;
+    },
+  },
+  methods: {
+    onCollapse() {
+      this.visible = !this.visible;
+    },
+    addCost: function () {
+      if (this.model.list == null) this.model.list = [];
+
+      this.model.list.push({
+        exRate: 3.6725,
         description: "",
         quantity: "",
         uom: "shp",
@@ -386,12 +314,10 @@ export default {
         subTotal: "0.00",
         total: "0.00",
         chargeTo: null,
-      },
-    };
-  },
-  methods: {
-    onCollapse() {
-      this.visible = !this.visible;
+      });
+    },
+    removeCost: function (i) {
+      this.model.list.splice(i, 1);
     },
   },
 };
